@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: insignis-batch
+  data:
+    mongodb:
+      database: insignis-db
+      port: 27017
+      uri: mongodb://localhost
