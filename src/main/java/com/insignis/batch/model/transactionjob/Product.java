@@ -10,13 +10,15 @@ public class Product implements Serializable {
 	private String name;
 	private String description;
 	private BigDecimal unitPrice;
+	private Integer quantity;
 
-	public Product(String id, String name, String description, BigDecimal unitPrice) {
+	public Product(String id, String name, String description, BigDecimal unitPrice, Integer quantity) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.unitPrice = unitPrice;
+		this.quantity = quantity;
 	}
 
 	public Product() {
@@ -53,6 +55,14 @@ public class Product implements Serializable {
 
 	public void setUnitPrice(BigDecimal unitPrice) {
 		this.unitPrice = unitPrice;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 }

@@ -2,6 +2,7 @@ package com.insignis.batch.model.transactionjob;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -16,11 +17,18 @@ public class Cart implements Serializable {
 	private String id;
 	private List<Product> products;
 	private BigDecimal total;
+	private String customerId;
+	private Date date;
+	private String outlet;
 
-	public Cart(String id, List<Product> products, BigDecimal total) {
+	public Cart(String id, List<Product> products, BigDecimal total, String customerId, Date date, String outlet) {
+		super();
 		this.id = id;
 		this.products = products;
 		this.total = total;
+		this.customerId = customerId;
+		this.date = date;
+		this.outlet = outlet;
 	}
 
 	public Cart() {
@@ -49,6 +57,30 @@ public class Cart implements Serializable {
 
 	public void setTotal(BigDecimal total) {
 		this.total = total;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getOutlet() {
+		return outlet;
+	}
+
+	public void setOutlet(String outlet) {
+		this.outlet = outlet;
 	}
 
 }
